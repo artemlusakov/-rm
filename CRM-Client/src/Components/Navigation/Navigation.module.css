@@ -1,0 +1,16 @@
+.Navigate{
+    display: flex;
+    justify-content: flex-end;
+    height: 50px;
+    align-items: center;
+    width: 98%;
+    background: var(--color-grey);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+}
+
+.NavigateBloc{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
