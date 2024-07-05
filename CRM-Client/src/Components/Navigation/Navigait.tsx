@@ -12,7 +12,11 @@ import ListItemText from '@mui/material/ListItemText';
 import {LinksPage} from "./Arr/muLinksPage";
 import {LinksFunction} from "./Arr/muLinksFunction"
 
+
 import s from './Navigation.module.css'
+import { Link } from 'react-router-dom';
+import { colors } from '@mui/material';
+
 
 
 export default function Navigate() {
@@ -24,22 +28,23 @@ export default function Navigate() {
 
 const styleNav = {
     width: 250,
-    padding: 2
-
+    padding: 2,
 }
 
     const DrawerList = (
-        <Box sx={styleNav} role="presentation" onClick={toggleDrawer(false)}>
+        <Box sx={styleNav} className={s.DrawerListBox} role="presentation" onClick={toggleDrawer(false)}>
             <List>
                 <h2>Страници</h2>
-                {LinksPage.map((text, index) => (
+                {LinksPage.map((text,index) => (
                     <ListItem key={text.name} disablePadding>
-                        <ListItemButton>
-                            <ListItemIcon>
-                                {text.icon}
-                            </ListItemIcon>
+                        <Link to={text.to}>
+                            <ListItemButton>
+                                <ListItemIcon>
+                                    {text.icon}
+                                </ListItemIcon>
                             <ListItemText primary={text.name} />
-                        </ListItemButton>
+                            </ListItemButton>
+                        </Link>
                     </ListItem>
                 ))}
             </List>
@@ -48,12 +53,14 @@ const styleNav = {
             <List>
                 {LinksFunction.map((text, index) => (
                     <ListItem key={text.name} disablePadding>
+                        <Link to={text.to}>
                         <ListItemButton>
                             <ListItemIcon>
                                 {text.icon}
                             </ListItemIcon>
                             <ListItemText primary={text.name} />
                         </ListItemButton>
+                        </Link>
                     </ListItem>
                 ))}
             </List>

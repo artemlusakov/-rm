@@ -14,3 +14,11 @@
     align-items: center;
     justify-content: center;
 }
+
+
+
+.DrawerListBox{
+    background:var(--color-grey);
+    box-shadow: var(--box-shadow);
+    height: 100%;
+}

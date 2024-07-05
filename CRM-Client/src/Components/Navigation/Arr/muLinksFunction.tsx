@@ -1,5 +1,3 @@
-import * as React from "react";
-
 import PostAddIcon from '@mui/icons-material/PostAdd';
 import ExtensionIcon from '@mui/icons-material/Extension';
 import ArrowCircleDownIcon from '@mui/icons-material/ArrowCircleDown';
@@ -7,14 +5,17 @@ import ArrowCircleDownIcon from '@mui/icons-material/ArrowCircleDown';
 export const LinksFunction = [
     {
         name: "Загрузить документацию",
-        icon: <ArrowCircleDownIcon/>
+        icon: <ArrowCircleDownIcon/>,
+        to: "#"
     },
     {
         name: "Сгенерировать Отчёт",
-        icon: <PostAddIcon/>
+        icon: <PostAddIcon/>,
+        to: "#"
     },
     {
         name: "Сформировать График",
-        icon: <ExtensionIcon/>
+        icon: <ExtensionIcon/>,
+        to: "#"
     }
 ]
