@@ -2,10 +2,7 @@ import Navigate from "../../Components/Navigation/Navigait";
 import DataTable from "../../Components/DataTabl/DataTabl";
 import s from "./Home.module.css"
 
-
-
 const Home = () => {
-
     return (
         <div>
             <Navigate/>
